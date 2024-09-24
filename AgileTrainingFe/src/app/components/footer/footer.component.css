@@ -1,0 +1,57 @@
+/* Stile generale per il footer */
+footer {
+  display: flex;
+  flex-wrap: wrap; /* Permette la disposizione dei contenuti su più righe se necessario */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-background);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 10px; /* Aggiunto padding per migliore spacing */
+  z-index: 1000;
+  user-select: none;
+}
+
+/* Stile per i link nel footer */
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* Maggiore spazio tra i link */
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+/* Effetto hover per i link */
+footer a:hover {
+  color: #ddd;
+}
+
+/* Stile per il logo */
+footer .logoA img {
+  height: 40px; /* Altezza maggiore del logo per una migliore visibilità */
+  width: auto;
+}
+
+/* Layout per rendere il footer responsive */
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Disposizione verticale sui dispositivi mobili */
+    align-items: center;
+    padding: 20px;
+    user-select: none;
+  }
+
+  footer a {
+    margin: 10px 0; /* Maggiore spazio verticale tra i link */
+    font-size: 16px; /* Font size aumentato per i dispositivi mobili */
+  }
+
+  footer .logoA {
+    margin-bottom: 15px; /* Maggiore spazio sotto il logo */
+  }
+}

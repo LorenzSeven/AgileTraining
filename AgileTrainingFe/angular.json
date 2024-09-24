@@ -1,0 +1,117 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "AgileTrainingFe": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "allowedCommonJsDependencies": [
+             "deepmerge",
+              "raf",
+              "rgbcolor",
+              "core-js",
+              "html2canvas",
+              "dompurify",
+              "canvg",
+              "ngx-translate-multi-http-loader"
+            ],
+            "outputPath": "dist/agile-training-fe",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "150kB",
+                  "maximumError": "150kB"
+                }
+              ],
+              "outputHashing": "all",
+              "allowedCommonJsDependencies": [
+                "deepmerge",
+                "raf",
+                "rgbcolor",
+                "core-js",
+                "html2canvas",
+                "dompurify",
+                "canvg",
+                "ngx-translate-multi-http-loader"
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "allowedCommonJsDependencies": [
+                "deepmerge",
+                "raf",
+                "rgbcolor",
+                "core-js",
+                "html2canvas",
+                "dompurify",
+                "canvg",
+                "ngx-translate-multi-http-loader"
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "AgileTrainingFe:build:production"
+            },
+            "development": {
+              "buildTarget": "AgileTrainingFe:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/assets"
+            ],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

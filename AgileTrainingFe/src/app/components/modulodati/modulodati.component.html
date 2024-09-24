@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- Mostra il messaggio di successo -->
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+
+  <!-- Mostra il messaggio di errore -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Form per aggiornare i dati utente -->
+  <form [formGroup]="updateForm" (ngSubmit)="confirmChanges()">
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+    </div>
+    <div>
+      <label for="profileImageUrl">URL Immagine Profilo:</label>
+      <input id="profileImageUrl" formControlName="profileImageUrl" type="text" />
+    </div>
+    <div>
+      <label for="residentialAddress">Indirizzo di Residenza:</label>
+      <input id="residentialAddress" formControlName="residentialAddress" type="text" />
+    </div>
+    <div>
+      <label for="homeAddress">Indirizzo di Casa:</label>
+      <input id="homeAddress" formControlName="homeAddress" type="text" />
+    </div>
+    <div>
+      <label for="gender">Genere:</label>
+      <select id="gender" formControlName="gender">
+        <option value="">Seleziona Genere</option>
+        <option value="Male">Maschio</option>
+        <option value="Female">Femmina</option>
+        <option value="Other">Altro</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="updateForm.invalid">Aggiorna</button>
+  </form>
+</div>

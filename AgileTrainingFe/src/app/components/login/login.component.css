@@ -1,0 +1,261 @@
+.container {
+  text-align: center;
+  line-height: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.logo {
+  margin-top: 5px;
+  width: 100px;
+  height: 60px;
+}
+
+.intro {
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+.loremP {
+  border: solid black 2px;
+  margin-bottom: 60px;
+  padding: 20px;
+  font-size: 18px;
+  width: auto;
+  margin: auto;
+  border-right: none;
+  border-left: none;
+  text-align: center;
+}
+
+.Login {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.inpBox {
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.userInp,
+.passInp {
+  border: none;
+  border-bottom: 2px solid black;
+  margin: 12px;
+  width: 80%;
+  font-size: 18px;
+  padding: 8px;
+  text-align: center;
+  outline: none;
+  box-shadow: none;
+}
+
+.btnLogin {
+  border: none;
+  padding: 10px 40px;
+  font-size: 20px;
+  border-radius: 25px;
+}
+
+.btnLogin:hover {
+  color: white;
+  background-color: #2d9bf0;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.lblUser,
+.lblPass {
+  display: none;
+}
+
+.passIcon,
+.userIcon {
+  display: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.linguaLogin {
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.linguaLogin button:hover {
+  color: white;
+  background-color: #2d9bf0;
+}
+
+.passToggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+input.userInp,
+input.passInp {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input.userInp::selection,
+input.passInp::selection {
+  background: transparent; /* Per nascondere l'area selezionata */
+}
+
+@media (orientation: portrait) {
+  .container {
+    max-width: 600px;
+   
+   
+  }
+
+  .logoDiv {
+    width: auto;
+    background-color: lightgray;
+    border-radius: 0 0 80px 80px;
+    margin: auto;
+  }
+
+ img {
+    width: 45%;
+
+   
+  }
+
+ 
+
+  
+
+  .Login {
+    font-size: 33px;
+    margin-top: 10%;
+    
+  }
+
+  .inpBox {
+    margin: 16px;
+    font-size: 25px;
+    
+  }
+
+  .userInp,
+  .passInp {
+    margin: 10px;
+    width: 90%;
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .btnLogin {
+    padding: 12px 50px;
+    font-size: 24px;
+  }
+
+.linguaLogin {
+  margin-top: 60px;
+  
+
+  .linguaBtn1{
+    margin-top: 20px;
+    margin-top: 2px;
+    padding: 8px;
+    font-size: medium;
+    margin: 5px;
+    border-radius: 5px;
+  }
+   
+  }
+  .linguaBtn2{
+    margin-top: 20px;
+    margin-top: 2px;
+    padding: 8px;
+    font-size: medium;
+    padding-left: 2px;
+    border-radius: 5px;
+  }
+
+}
+
+@media (orientation: landscape) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .logoDiv {
+    width: 100%;
+    background-color: gray;
+    border-radius:  80px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .logo {
+    width: 140px;
+    height: 60px;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: block;
+  }
+
+
+  
+
+  .Login {
+    font-size: 40px;
+  }
+
+  .inpBox {
+    margin: 20px 0;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .userInp,
+  .passInp {
+    margin: 10px auto;
+    width: 90%;
+    font-size: 22px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .btnLogin {
+    padding: 12px 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 25px;
+    background-color: #2d9bf0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btnLogin:hover {
+    background-color: #1a7bb9;
+  }
+
+  .linguaLogin button {
+    margin-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    
+  
+  }
+}

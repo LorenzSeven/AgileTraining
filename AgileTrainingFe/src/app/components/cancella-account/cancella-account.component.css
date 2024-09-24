@@ -1,0 +1,126 @@
+/* Stili base (per desktop) */
+
+
+.leftDiv, .rightDiv {
+  border-top: none;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 20px;
+}
+
+.leftDiv {
+  width: 20%;
+  float: left;
+}
+
+.rightDiv {
+  width: 80%;
+  float: left;
+  padding-top: 60px;
+}
+
+.fotoProfilo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.divOpzione {
+  margin-top: 20px;
+}
+
+.divOpzione ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.divOpzione li {
+  margin-bottom: 5px;
+}
+
+.divOpzione li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.divOpzione li a:hover {
+  background-color: #e0e0e0;
+  color: white;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+.passDiv {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.btnElimina {
+  border: none;
+  background-color: #ff4c4c;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btnElimina:hover {
+  background-color: #d43f3f;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+  .leftDiv, .rightDiv {
+      width: 100%;
+      float: none;
+      text-align: left;
+  }
+
+  .rightDiv {
+      padding-top: 0;
+  }
+
+  .mobile-menu {
+      display: block;
+  }
+
+  .divOpzione {
+      display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .profiloDiv h1 {
+      font-size: 24px;
+  }
+
+  .fotoProfilo {
+      height: 50px;
+      width: 50px;
+  }
+
+  .divOpzione li a {
+      padding: 8px;
+      font-size: 14px;
+  }
+}
